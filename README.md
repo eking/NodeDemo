@@ -3,5 +3,7 @@ NodeDemo
 
 same demo on NodeJS
 
-[code] npm install [/code]
+
 > npm install
+> 
+> node app.js
