@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<link href='/css/style.css' rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".submit").hide();
+  $(".file").change(function(){
+    var val = $(this).val();
+    var arr=val.split('.');
+    var type=arr[arr.length-1];
+    var arr2 = val.split('\\');
+    var value=arr2[arr2.length-1];
+    var p;
+    if(type=="js"){
+    	$(".file").hide();
+  		$(".submit").show();
+  		p = $("<p>已选择文件<span>" + value + "</span> <br>格式正确，可以提交！</p>");
+  		$(".box").addClass("succ");
+    }else if(type==""){
+  		p = $("<p>你知道你刚才在干嘛吗？你啥都没选！</p>");
+    }else{
+      p = $("<p class='e'>你选了个<em>" + type + "</em>格式的文件，目前只支持<em>js</em>文件压缩</p>");
+      p = $("<p class='u'>可以上传。。。");
+  		$(".box").addClass("err");
+    }
+    $(".box").append(p);
+
+    $('.submit').click(function(){
+        var data = new FormData();
+        var files = $('.file')[0].files;
+        data.append('codecsv',files[0]);
+        $.ajax({
+          cache: false,
+          type: 'post',
+          dataType: 'json',
+          url:'/upload',
+          data : data,
+          contentType: false,
+          processData: false,
+          success: function(){
+              alert('success');
+          },
+          error: function(){
+              alert ('error');
+          }
+        });
+    });
+  });
+});
+</script>
+</head>
+<body>
+<header class="header">
+  <h1><%= title %> - 代码压缩</h1>
+</header>

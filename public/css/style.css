@@ -1,0 +1,30 @@
+body,header,footer,article,aside,canvas,caption,footer,address,ul,ol,li,dl,dt,dd,h1,h2,h3,p{border:0;margin:0;padding:0}
+img{display:inline-block;}
+form{height:0;width:0}
+a{text-decoration:none;}
+ul,ol{ list-style-type:none;}
+body{font-size:100%;background:#eee url('/img/bg.png');color:#666;padding-bottom:80px;}
+.clearfix:after {clear:both;content:' ';display:block;height:0;overflow:hidden;}
+.header{height:80px;background-color:#ff5f3e;}
+.header h1{font:normal 24px/80px 'microsoft yahei';text-align:center;color:#fff}
+
+.wrap{margin:0 auto;width:100%;padding:10px 0;}
+.box{width:400px;height:300px;border:#ccc 1px solid;border-radius:5px;padding:10px;background-color:#fff;margin:0 auto;position:relative;}
+.box p{height:20px;font-size:12px;color:#666;line-height:20px}
+.box span{color:#6ac62e}
+.box em{font:normal bold 14px/20px arial}
+.box.err{border:#900 1px solid;}
+.box.succ{border:#6ac62e 1px solid;}
+.box .e{color:#900}
+
+.box .btn{position:absolute;bottom:-15px;left:50%;margin-left:-38px;height:30px;width:76px;font:normal 14px/30px 'microsoft yahei';border-radius:4px;text-align:center;cursor:pointer;}
+.box .file{box-shadow:0 3px 3px #050;color:#fff;background:#51a351 linear-gradient(to bottom,#62c462,#51a351) repeat-x;border:#51a351 1px solid;text-shadow:0 1px 1px #050;text-indent:-999em}
+.box .file:after{content:'上传';position:absolute;left:50%;margin-left:-38px;width:78px;text-indent:0;text-align:center;}
+.box .file:hover{background:#51a351;}
+.box .file:active{background:#51a351 linear-gradient(to bottom,#51a351,#409250) repeat-x;}
+.box .submit{box-shadow:0 3px 3px #050;color:#fff;background:#51a351 linear-gradient(to bottom,#62c462,#51a351) repeat-x;border:#51a351 1px solid;text-shadow:0 1px 1px #050}
+.box .submit:hover{background:#51a351;}
+.box .submit:active{background:#51a351 linear-gradient(to bottom,#51a351,#409250) repeat-x;}
+
+.footer{height:60px;width:100%;background-color:#eee;position:fixed;bottom:0}
+.footer p{text-align:center;font:normal 16px/60px Tahoma,Arial;height:100%}
