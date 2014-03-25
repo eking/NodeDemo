@@ -5,7 +5,10 @@ NodeDemo
 
 
 > git clone git@github.com:eking/NodeDemo.git
+
 > cd NodeDemo
+
 > npm install
+
 > node app.js
 
