@@ -32,7 +32,7 @@ app.use(express.bodyParser({uploadDir:'./upload'}));
 
 
 app.listen(app.get('port'), function(){
-  console.log('Run:http://192.168.129.112:' + app.get('port'));
+  console.log('Run:localhost:' + app.get('port'));
 });
 
 
